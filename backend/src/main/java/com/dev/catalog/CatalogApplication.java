@@ -1,13 +1,12 @@
-package com.devsuperior.dscatalog;
+package com.dev.catalog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DscatalogApplication {
+public class CatalogApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DscatalogApplication.class, args);
+		SpringApplication.run(CatalogApplication.class, args);
 	}
-
 }
