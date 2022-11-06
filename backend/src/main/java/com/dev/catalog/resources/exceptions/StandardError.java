@@ -1,4 +1,4 @@
-package com.dev.catalog.resources.Exceptions;
+package com.dev.catalog.resources.exceptions;
 
 import java.io.Serializable;
 import java.time.Instant;
