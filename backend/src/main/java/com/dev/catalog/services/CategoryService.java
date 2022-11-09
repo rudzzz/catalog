@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.dev.catalog.dto.CategoryDTO;
 import com.dev.catalog.entities.Category;
 import com.dev.catalog.repositories.CategoryRepository;
+import com.dev.catalog.services.exceptions.DatabaseException;
 import com.dev.catalog.services.exceptions.ResourceNotFoundException;
 
 @Service
@@ -64,6 +65,9 @@ public class CategoryService {
 		}
 		catch(EmptyResultDataAccessException exception) {
 			throw new ResourceNotFoundException("the id " + id + " was not found!");
+		}
+		catch(DataIntegrityViolationException exception) {
+			throw new DatabaseException("Interity violation!");
 		}
 	}
 }
